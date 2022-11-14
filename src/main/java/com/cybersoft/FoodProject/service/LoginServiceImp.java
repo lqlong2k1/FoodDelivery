@@ -17,4 +17,10 @@ public class LoginServiceImp implements LoginService{
         List<UserEntity> users  = userRepository.findByEmailAndPassword(email, password);
         return users.size()>0? true:false;
     }
+
+    @Override
+    public UserEntity checkLogin(String email) {
+        List<UserEntity> users  = userRepository.findByEmail(email);
+        return users.size()>0? users.get(0): null;
+    }
 }
