@@ -1,9 +1,11 @@
 package com.cybersoft.FoodProject.security;
 
+import com.cybersoft.FoodProject.jwt.JwtTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -11,6 +13,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
@@ -40,6 +43,9 @@ public class SecSecurityConfig {
     @Autowired
     CustomeAuthenProvider customeAuthenProvider;
 
+    @Autowired
+    JwtTokenFilter jwtTokenFilter;
+
     @Bean
     public AuthenticationManager authenticationManager(HttpSecurity http) throws Exception {
         AuthenticationManagerBuilder authenticationManagerBuilder =
@@ -48,6 +54,7 @@ public class SecSecurityConfig {
         return authenticationManagerBuilder.build();
     }
 
+    //Mã hóa password
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -70,8 +77,13 @@ public class SecSecurityConfig {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/signin").permitAll()
+                .antMatchers("/refresh-token").permitAll()
                 .antMatchers("/signin/test").authenticated()
                 .anyRequest().authenticated();
+        /*
+         * Thêm 1 filer trc một filter nào đó
+         * */
+        http.addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 
