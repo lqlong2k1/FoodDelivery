@@ -37,7 +37,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
                 System.out.println("kiem tra "+json +" - "+ map.get("type").toString());
                 if (StringUtils.hasText(map.get("type").toString())
                         && !map.get("type").toString().equals("refresh")){
-                    UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken("as", "asas", new ArrayList<>());
+                    UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken("", "", new ArrayList<>());
                     SecurityContext securityContext = SecurityContextHolder.getContext();
                     securityContext.setAuthentication(authenticationToken);
                 }
