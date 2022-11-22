@@ -1,4 +1,4 @@
-package com.cybersoft.FoodProject.entity;
+package com.LongLQ.FoodProject.entity;
 
 import javax.persistence.*;
 

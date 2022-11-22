@@ -1,9 +1,8 @@
-package com.cybersoft.FoodProject.security;
+package com.LongLQ.FoodProject.security;
 
-import com.cybersoft.FoodProject.entity.UserEntity;
-import com.cybersoft.FoodProject.service.LoginService;
+import com.LongLQ.FoodProject.entity.UserEntity;
+import com.LongLQ.FoodProject.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

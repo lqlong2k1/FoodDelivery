@@ -1,4 +1,4 @@
-package com.cybersoft.FoodProject.payload.response;
+package com.LongLQ.FoodProject.payload.response;
 
 public class DataResponse {
     private int status;

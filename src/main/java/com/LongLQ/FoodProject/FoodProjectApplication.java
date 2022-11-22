@@ -1,4 +1,4 @@
-package com.cybersoft.FoodProject;
+package com.LongLQ.FoodProject;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,16 +1,12 @@
-package com.cybersoft.FoodProject.jwt;
+package com.LongLQ.FoodProject.jwt;
 
-import com.cybersoft.FoodProject.entity.UserEntity;
 import com.google.gson.Gson;
 import io.jsonwebtoken.*;
-import io.jsonwebtoken.io.Decoder;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
-import java.security.Key;
-import java.util.Base64;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -67,9 +63,7 @@ public class JwtTokenHelper {
         } catch (IllegalArgumentException ex) {
             System.out.println("JWT claims string is empty.");
         }
-//        catch (Exception ex){
-//            System.out.println("JWT claims string is empty.");
-//        }
+
         return isSuccess;
     }
 }

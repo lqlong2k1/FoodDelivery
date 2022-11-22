@@ -1,10 +1,10 @@
-package com.cybersoft.FoodProject.controller;
+package com.LongLQ.FoodProject.controller;
 
-import com.cybersoft.FoodProject.jwt.JwtTokenHelper;
-import com.cybersoft.FoodProject.payload.request.SignInRequest;
-import com.cybersoft.FoodProject.payload.response.DataResponse;
-import com.cybersoft.FoodProject.payload.response.DataTokenResponse;
-import com.cybersoft.FoodProject.service.LoginService;
+import com.LongLQ.FoodProject.jwt.JwtTokenHelper;
+import com.LongLQ.FoodProject.payload.response.DataResponse;
+import com.LongLQ.FoodProject.payload.response.DataTokenResponse;
+import com.LongLQ.FoodProject.service.LoginService;
+import com.LongLQ.FoodProject.payload.request.SignInRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

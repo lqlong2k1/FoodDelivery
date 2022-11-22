@@ -1,6 +1,6 @@
-package com.cybersoft.FoodProject.repository;
+package com.LongLQ.FoodProject.repository;
 
-import com.cybersoft.FoodProject.entity.UserEntity;
+import com.LongLQ.FoodProject.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

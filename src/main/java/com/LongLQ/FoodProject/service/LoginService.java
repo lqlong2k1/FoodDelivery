@@ -1,6 +1,6 @@
-package com.cybersoft.FoodProject.service;
+package com.LongLQ.FoodProject.service;
 
-import com.cybersoft.FoodProject.entity.UserEntity;
+import com.LongLQ.FoodProject.entity.UserEntity;
 
 public interface LoginService {
     public boolean checkLogin(String email, String password);

@@ -1,22 +1,18 @@
-package com.cybersoft.FoodProject.controller;
+package com.LongLQ.FoodProject.controller;
 
-import com.cybersoft.FoodProject.jwt.JwtTokenHelper;
-import com.cybersoft.FoodProject.payload.response.DataResponse;
-import com.cybersoft.FoodProject.payload.response.DataTokenResponse;
+import com.LongLQ.FoodProject.jwt.JwtTokenHelper;
+import com.LongLQ.FoodProject.payload.response.DataResponse;
+import com.LongLQ.FoodProject.payload.response.DataTokenResponse;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.context.SecurityContext;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.Map;
 
 @RestController

@@ -1,4 +1,4 @@
-package com.cybersoft.FoodProject.payload.request;
+package com.LongLQ.FoodProject.payload.request;
 
 public class SignInRequest {
     private String email;

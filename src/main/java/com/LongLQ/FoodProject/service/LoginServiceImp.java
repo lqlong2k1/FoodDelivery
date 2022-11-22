@@ -1,7 +1,7 @@
-package com.cybersoft.FoodProject.service;
+package com.LongLQ.FoodProject.service;
 
-import com.cybersoft.FoodProject.entity.UserEntity;
-import com.cybersoft.FoodProject.repository.UserRepository;
+import com.LongLQ.FoodProject.entity.UserEntity;
+import com.LongLQ.FoodProject.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
