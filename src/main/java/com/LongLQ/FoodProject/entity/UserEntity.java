@@ -1,6 +1,6 @@
 package com.LongLQ.FoodProject.entity;
-
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity(name = "user")
 public class UserEntity {
@@ -34,6 +34,39 @@ public class UserEntity {
 
     @Column(name = "is_active")
     private boolean isActive;
+
+    @OneToOne(mappedBy = "user")
+    private UserDetailEntity userDetail;
+
+    @OneToMany(mappedBy = "user")
+    private Set<FoodReviewEntity> foodReviews;
+
+    @OneToMany(mappedBy = "user")
+    private Set<TOrderEntity> tOrder;
+
+    public Set<TOrderEntity> gettOrder() {
+        return tOrder;
+    }
+
+    public void settOrder(Set<TOrderEntity> tOrder) {
+        this.tOrder = tOrder;
+    }
+
+    public Set<FoodReviewEntity> getFoodReviews() {
+        return foodReviews;
+    }
+
+    public void setFoodReviews(Set<FoodReviewEntity> foodReviews) {
+        this.foodReviews = foodReviews;
+    }
+
+    public UserDetailEntity getUserDetail() {
+        return userDetail;
+    }
+
+    public void setUserDetail(UserDetailEntity userDetail) {
+        this.userDetail = userDetail;
+    }
 
     public int getId() {
         return id;
